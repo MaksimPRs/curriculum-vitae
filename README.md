@@ -17,7 +17,7 @@
 Computer Science. <br>
 4th year student (average score: 6.8/10)
 
-### Computer Skills
+### Skills
 - Operating Systems: Windows Family, Linux distributives: ArchLinux, Mint;
 - Programming Languages: Java, JavaScript, jQuery;
 - Markup: HTML, XML, DTD, XMLSchema, XSLT;
