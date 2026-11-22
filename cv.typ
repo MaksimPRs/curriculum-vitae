@@ -1,11 +1,10 @@
-#import "dsl.typ": *
+#import "dsl.typ" // by default imported within a 'dsl' namespace
 
-#show: cv 
+#show: dsl.cv-theme 
 
-// ---------------------------- Content -------------------------------
-#cv-header("Maksim Protasevich")
+#dsl.name-in-header("Maksim Protasevich")
 
-#contact-info(
+#dsl.contact-info(
   content-left: ("Poland"),
   content-right: (
     link("mailto:bnqc7um7k@mozmail.com")[Email],
@@ -13,14 +12,14 @@
   ),
 )
 
-#summary[
+#dsl.summary[
   Software engineer with over 12 years of experience in backend development of reliable and distributed systems with a focus on Rust. Proven experience of making performant and scalable systems with robustness in mind. As a dev with education in math, I aim to not just create software, but make it easier for others to maintain it.
 ]
 
-#experience(
-  entry(
+#dsl.experience(
+  dsl.entry(
     position: "Java Software Engineer",
-    company: "Spribe, Estonia, Remote",
+    company: "Spribe, Remote",
     dates: (datetime(day: 19, month: 12, year: 2022), datetime(day: 17, month: 9, year: 2026)),
     achievements: [
       - Designed an internal *Java* framework for slot games, which later has been used within our team. It simplified maintainability and reduced development time of new games by providing appropriate abstractions to the domain model, helping developers to focus on business logic rather than copying low-level implementation;
@@ -30,9 +29,9 @@
     ],
     tech-stack: ("Java 17-25", "Spring Boot", "PostgreSQL", "Redis", "Caffeine", "Docker", "OpenLens", "Mockito", "JUnit5", "Instancio"),
   ),
-  entry(
+  dsl.entry(
     position: "Java Software Engineer",
-    company: "Surprise.com, Ukraine, Remote",
+    company: "Surprise.com, Lviv, Ukraine, Hybrid",
     dates: (datetime(day: 21, month: 12, year: 2021), datetime(day: 12, month: 9, year: 2022)),
     achievements: [
       - Designed a distributed wallet-service based on SAGA pattern;
@@ -41,9 +40,9 @@
     ],
     tech-stack: ("Java 17", "Spring Boot", "PostgreSQL", "AWS", "Docker", "OpenLens", "Redis", "Mockito", "JUnit")
   ),
-  entry(
+  dsl.entry(
     position: "Java Software Engineer",
-    company: "ObjectStyle, Minsk, Belarus",
+    company: "ObjectStyle, Minsk, Belarus, Hybrid ",
     dates: (datetime(day: 1, month: 12, year: 2019), datetime(day: 3, month: 11, year: 2021)),
     achievements: [
       - Maintained 3 projects on my own;
@@ -51,7 +50,7 @@
     ],
     tech-stack: ("Java 8", "Bootique", "Apache Cayenne", "LinkMove", "Docker", "Bamboo Specs")
   ),
-  entry(
+  dsl.entry(
     position: "Java Software Engineer",
     company: "Synesis, Minsk, Belarus",
     dates: (datetime(day: 1, month: 8, year: 2017), datetime(day: 1, month: 8, year: 2019)),
@@ -68,7 +67,7 @@
     tech-stack: ("Java 8", "Spring Framework", "GAE Endpoints", "GAE Datastore", "GAE Memcache", "Cloud Tasks (former Task Queue)", "Swagger", "Elasticsearch", "TestNG", "Mockito")
   ),
   pagebreak(),
-  entry(
+  dsl.entry(
     position: "Java Software Engineer",
     company: "ISSoft Solutions (Coherent Solutions), Minsk, Belarus",
     dates: (datetime(day: 1, month: 6, year: 2014), datetime(day: 7, month: 4, year: 2017)),
@@ -79,8 +78,8 @@
   )
 )
 
-#education(
-  entry(
+#dsl.education(
+  dsl.entry(
     position: "Student",
     company: "Rust Live Certification Accelerator, Let’s Get Rusty",
     dates: (datetime(day: 13, month: 9, year: 2026), datetime(day: 1, month: 4, year: 2027)),
@@ -88,7 +87,7 @@
       - Designed and implemented a distributed in-memory KV-storage based on the RAFT algorithm. #link("https://github.com/MaksimPRs/kiwi/")[Project Link]
     ]
   ),
-  entry(
+  dsl.entry(
     position: "Computer Science, Bachelor’s degree",
     company: "Belarusian State University, Faculty of Applied Mathematics and Computer Science, Minsk, Belarus",
     dates: (none, datetime(day: 17, month: 7, year: 2015)),
@@ -106,7 +105,7 @@
 //   - Thing two
 // ]
 
-#skills(
+#dsl.skills(
   title: "Technical Skills",
   Frameworks: ("Java 17-25", "Rust", "Spring", "JUnit"),
   Tools: ("Swagger", "PostgreSQL", "Redis", "Docker", "K8s", "OpenLens", "GCP", "AWS"),

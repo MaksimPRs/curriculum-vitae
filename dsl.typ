@@ -9,7 +9,7 @@
   rule-stroke: 0.5pt,
 )
 
-#let cv(body) = {
+#let cv-theme(body) = {
   set page(paper: "a4", margin: (x: 7.5mm, top: 7.5mm, bottom: 7.5mm))
   set text(font: theme.font, size: theme.body-size, lang: "en")
   set par(justify: true, leading: 0.45em, spacing: 1.38em)
@@ -33,7 +33,7 @@
   let fmt(d) = if d == none { "Present" } else { d.display("[month repr:short] [year]") }
   let (from, to) = span
   if from == none and to == none { return [] }
-  if from == none { return fmt(to) }
+  if from == none { return to.display("[year]") }
   fmt(from) + " — " + fmt(to)
 }
 
@@ -52,7 +52,7 @@
 
 // Page head. NB: shadows Typst's built-in `header` page element — rename to
 // cv-header if you ever want running page headers.
-#let cv-header(name) = block(
+#let name-in-header(name) = block(
   above: 0pt,
   below: 1.25em,
   width: 100%,
