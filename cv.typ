@@ -13,7 +13,7 @@
 )
 
 #dsl.summary[
-  Software engineer with over 12 years of experience in backend development of reliable and distributed systems with a focus on Rust. Proven experience of making performant and scalable systems with robustness in mind. As a dev with education in math, I aim to not just create software, but make it easier for others to maintain it.
+      Software engineer with 12+ years of experience in backend development of reliable and distributed systems with a focus on Rust. Proven experience of making performant and scalable systems with robustness in mind. Developer backed by Math reasoning who has a passion for creating efficient software.
 ]
 
 #dsl.experience(
@@ -22,10 +22,10 @@
     company: "Spribe, Remote",
     dates: (datetime(day: 19, month: 12, year: 2022), datetime(day: 17, month: 9, year: 2026)),
     achievements: [
-      - Designed an internal *Java* framework for slot games, which later has been used within our team. It simplified maintainability and reduced development time of new games by providing appropriate abstractions to the domain model, helping developers to focus on business logic rather than copying low-level implementation;
-      - Proposed and implemented an internal multi-layered caching mechanism on top of *Caffeine* and *Redis* implementations for L1 and L2 levels respectively for a library. It aimed to reduce load on one of the highly-demanded internal service;
-      - Initiated research on efficiency of serialization protocols and with the help of *WireShark* proved the lack of benefit from switching between existing and proposed protocols in terms of traffic size. As a result, that saved us a significant amount of time and resources;
-      - Simplified game balancing process for our game designer, by designing a tool which allowed him to execute simulations on running instances of our games and adjust its configurations at runtime, eliminating the need to restart the app on every modification of weights.
+      - Designed an internal *Java* framework for defining state-machine and processing its transitions; 
+      - Proposed and implemented an internal multi-layered caching mechanism on top of *Caffeine* and *Redis* for L1 and L2 levels respectively for an extensively used workflow in internal library;
+      - Initiated a research, which saved company's resources by proving the pointless of the refactoring, proposed by another team;
+      - Recognized the complexity of work process in other team and provided the solution to simplify it.
     ],
     tech-stack: ("Java 17-25", "Spring Boot", "PostgreSQL", "Redis", "Caffeine", "Docker", "OpenLens", "Mockito", "JUnit5", "Instancio"),
   ),
@@ -55,18 +55,17 @@
     company: "Synesis, Minsk, Belarus",
     dates: (datetime(day: 1, month: 8, year: 2017), datetime(day: 1, month: 8, year: 2019)),
     achievements: [
-      - Designed and implemented new communication protocol for the existing messenger app, preserving backward compatibility with old clients (exclusively for transition period, as far as old approach was very inefficient);
-      - Designed new DB structure for effective data storage and data reads;
+      - Designed and implemented new communication protocol for the existing messenger app, preserving backward compatibility with old clients;
+      - Redesigned DB structure for effective data storage and data reads;
       - Accomplished a zero-downtime migration on a schemaless DB named Datastore with 95% of data preservation;
       - All the changes in total resulted in:
         - Reduced total bills on cloud infrastructure by 66%;
         - Reduced load on Datastore by 45%;
         - Let us reduce instance count by 50%;
-        - P99 latency per request reduced from roughly 4s to less than 250ms.
+        - P99 latency reduced from roughly 4s to less than 250ms.
     ],
     tech-stack: ("Java 8", "Spring Framework", "GAE Endpoints", "GAE Datastore", "GAE Memcache", "Cloud Tasks (former Task Queue)", "Swagger", "Elasticsearch", "TestNG", "Mockito")
   ),
-  pagebreak(),
   dsl.entry(
     position: "Java Software Engineer",
     company: "ISSoft Solutions (Coherent Solutions), Minsk, Belarus",
@@ -77,6 +76,8 @@
     tech-stack: ("Java 6-8", "Spring Framework", "Spring MVC", "Hybris", "guava")
   )
 )
+
+#pagebreak();
 
 #dsl.education(
   dsl.entry(
@@ -99,14 +100,9 @@
   ),
 )
 
-// Any section that is not a list of entries — plain content, any markup:
-// #section("Projects")[
-//   - Thing one
-//   - Thing two
-// ]
-
 #dsl.skills(
   title: "Technical Skills",
   Frameworks: ("Java 17-25", "Rust", "Spring", "JUnit"),
   Tools: ("Swagger", "PostgreSQL", "Redis", "Docker", "K8s", "OpenLens", "GCP", "AWS"),
 )
+

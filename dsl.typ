@@ -2,10 +2,10 @@
 // Tune the whole document from here; the components below only read it.
 #let theme = (
   font: "New Computer Modern",
-  body-size: 10.8pt,
+  body-size: 11pt,
   name-size: 16pt,
-  contact-size: 10pt,
-  heading-size: 15pt,
+  contact-size: 11pt,
+  heading-size: 16pt,
   rule-stroke: 0.5pt,
 )
 
